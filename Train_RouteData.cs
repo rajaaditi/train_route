@@ -6,6 +6,7 @@ using MySql.Data.MySqlClient;
 using System.Collections.Generic;
 using System.Data;
 using System.Threading.Tasks;
+using System.Linq;
 
 namespace LLM.Store.DAL
 {
@@ -83,8 +84,7 @@ namespace LLM.Store.DAL
                 return null;
             }
         }
-       
-       
+        
         public async Task<(int, List<ListTrainRouteResponseViewModel>)> ListFilterRouteTrain(int pageIndex, int pageSize, ListTrainRouteRequestViewModel entity)
         {
             List<ListTrainRouteResponseViewModel> trains = new List<ListTrainRouteResponseViewModel>();
